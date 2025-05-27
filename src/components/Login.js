@@ -7,15 +7,12 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useDispatch } from "react-redux";
-import { addUser } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignedForm, setIsSignedForm] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const email = useRef(null);
